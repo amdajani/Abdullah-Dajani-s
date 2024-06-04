@@ -14,6 +14,7 @@
         <!-- Left half body -->
         <section id="left-page">
             <div id="left-page-container" class=" fixed top-0 left-0 w-1/2 bg-gray-50 h-full font-sans antialiased text-gray-900 pt-20 pl-24 pr-16">
+
                 <a href="#right-page-beginning"><h1 class="text-5xl font-extrabold">Abdullah Dajani</h1></a>
                 <h2 class="text-2xl mt-2 font-semibold">Software Engineer</h2>
                 <h3 class="text-base text-gray-900 mt-3 font-light max-w-xs">I build pixel-perfect, engaging, and accessible digital experiences.</h3>
@@ -30,16 +31,13 @@
                         <a target="_blank" class="hover:text-black" href="https://github.com/amdajani">
                             <i class="fab fa-github fa-2x mr-2"></i>
                         </a>
-    
                         <a target="_blank" class="hover:text-black" href="https://www.linkedin.com/in/dajani-abdullah">
                             <i class="fa-brands fa-linkedin fa-2x mr-2"></i>
                         </a>
-                        
-                        <a target="_blank" class="hover:text-black cursor-pointer">
+                        <a target="_blank" href="mailto:dajani.abdullah.majid@gmail.com?subject=Hi Abdullah, Let's Connect!" class="hover:text-black cursor-pointer">
                             <i class="fa-solid text-3xl fa-envelope mr-2"></i>
                         </a>
-    
-                        <a target="_blank" href="resume.pdf" class="hover:underline text-base hover:text-black ">View Full Resume<i class="fa-solid group-hover:text-white fa-arrow-up-right-from-square font-thin pl-2 text-sm"></i></a>
+                        <a target="_blank" id="resume-link" href="resume.pdf" onclick="changeTabTitle()" class="hover:underline text-base hover:text-black ">View Full Resume<i class="fa-solid group-hover:text-white fa-arrow-up-right-from-square font-thin pl-2 text-sm"></i></a>
                     </div>
                 </footer>
 
@@ -73,7 +71,7 @@
 
                 <!-- Experience Cards -->
                 <div id="empty2" class=" pt-2 mt-36"></div>
-                <div id="experience-card-1" class="group hover:bg-customNavy transform duration-150 pl-3 rounded-lg">
+                <div id="experience-card-1" class="group cursor-pointer hover:bg-customNavy transform duration-150 pl-3 rounded-lg">
                     <div id="experience-cards-head" class="mt-10 pt-4 text-left flex flex-row">
                         <p class=" w-24 text-xs items-top group-hover:text-gray-400 text-gray-700 leading-relaxed font-bold">2024 &#8212; PRESENT</p>
                         <h1 class="text-base text-gray-900 group-hover:text-white ml-2 leading-relaxed font-semibold">Senior Frontend Engineer • Apple</h1>
@@ -82,7 +80,7 @@
                     
                     <div id="experience-cards-content" class="text-sm pb-3 ml-24 items-center text-left font-normal text-gray-900 leading-relaxed">
                         <p class="ml-2 group-hover:text-gray-200 font-light">Build and maintain critical components used to construct Klayviou\s frontend, across the whole product.</p>
-                        <div id="relevant-skills" class=" flex flex-row pl-2 pt-4">
+                        <div id="relevant-skills" class=" flex flex-row ml-2 mt-4">
                             <p class=" bg-yellow-400 font-semibold rounded-xl py-1 px-2 ">JavaScript</p>
                             <p class=" rounded-xl py-1 ml-2 px-2 bg-yellow-400 font-semibold">Python</p>
                             <p class=" rounded-xl py-1 ml-2 px-2  bg-yellow-400 font-semibold">C</p>
@@ -91,7 +89,7 @@
                 </div>
 
                 <!-- 2nd Experience Card-->
-                <div id="experience-card-2" class="group hover:bg-customNavy transform duration-150 pl-3 rounded-lg">
+                <div id="experience-card-2" class="group cursor-pointer hover:bg-customNavy transform duration-150 pl-3 rounded-lg">
                     <div id="experience-cards-head" class="mt-10 pt-4 text-left flex flex-row">
                         <p class=" w-24 text-xs items-top group-hover:text-gray-400 text-gray-700 leading-relaxed font-bold">2024 &#8212; PRESENT</p>
                         <h1 class="text-base text-gray-900 group-hover:text-white ml-2 leading-relaxed font-semibold">Senior Frontend Engineer • Apple</h1>
@@ -100,7 +98,7 @@
                     
                     <div id="experience-cards-content" class="text-sm pb-3 ml-24 items-center text-left font-normal text-gray-900 leading-relaxed">
                         <p class="ml-2 group-hover:text-gray-200 font-light">Build and maintain critical components used to construct Klayviou\s frontend, across the whole product.</p>
-                        <div id="relevant-skills" class=" flex flex-row pl-2 pt-4">
+                        <div id="relevant-skills" class=" flex flex-row ml-2 mt-4">
                             <p class=" bg-yellow-400 font-semibold rounded-xl py-1 px-2 ">JavaScript</p>
                             <p class=" rounded-xl py-1 ml-2 px-2 bg-yellow-400 font-semibold">Python</p>
                             <p class=" rounded-xl py-1 ml-2 px-2  bg-yellow-400 font-semibold">C</p>
@@ -109,7 +107,7 @@
                 </div>
                 
                 <!-- 3rd Experience Card-->
-                <div id="experience-card-3" class="group hover:bg-customNavy transform duration-150 pl-3 rounded-lg">
+                <div id="experience-card-3" class="group cursor-pointer hover:bg-customNavy transform duration-150 pl-3 rounded-lg">
                     <div id="experience-cards-head" class="mt-10 pt-4 text-left flex flex-row">
                         <p class=" w-24 text-xs items-top group-hover:text-gray-400 text-gray-700 leading-relaxed font-bold">2024 &#8212; PRESENT</p>
                         <h1 class="text-base text-gray-900 group-hover:text-white ml-2 leading-relaxed font-semibold">Senior Frontend Engineer • Apple</h1>
@@ -118,9 +116,9 @@
                     
                     <div id="experience-cards-content" class="text-sm pb-3 ml-24 items-center text-left font-normal text-gray-900 leading-relaxed">
                         <p class="ml-2 group-hover:text-gray-200 font-light">Build and maintain critical components used to construct Klayviou\s frontend, across the whole product.</p>
-                        <div id="relevant-skills" class=" flex flex-row pl-2 pt-4">
+                        <div id="relevant-skills" class="flex flex-row ml-2 mt-4">
                             <p class=" bg-yellow-400 font-semibold rounded-xl py-1 px-2 ">JavaScript</p>
-                            <p class=" rounded-xl py-1 ml-2 px-2 bg-yellow-400 font-semibold">Python</p>
+                            <p class=" rounded-xl py-1 ml-2 px-2  bg-yellow-400 font-semibold">Python</p>
                             <p class=" rounded-xl py-1 ml-2 px-2  bg-yellow-400 font-semibold">C</p>
                         </div>
                     </div>
@@ -156,8 +154,12 @@
                 aboutLink.classList.add('text-gray-900', 'translate-x-8');
               }
             });
-        
+            
+            function changeTabTitle() {
+                document.title = "Abdullah's Resume";
+            }
 
+            
             
           </script>
 </body>
