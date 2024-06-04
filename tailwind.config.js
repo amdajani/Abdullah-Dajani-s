@@ -9,6 +9,7 @@ module.exports = {
       colors: {
         customNavy: '#000035', // Replace with your specific color
       },
+      scrollBehavior: ['smooth'],
     },
   },
   plugins: [],
