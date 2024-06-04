@@ -5,7 +5,11 @@ module.exports = {
     './src/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        customNavy: '#000035', // Replace with your specific color
+      },
+    },
   },
   plugins: [],
 }
