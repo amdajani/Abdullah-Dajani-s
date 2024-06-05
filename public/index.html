@@ -10,16 +10,16 @@
 </head>
   
 
-<body>
+<body class="bg-gray-50">
     <!-- Left half body -->
     <section id="left-page">
-        <div id="left-page-container" class="fixed top-0 left-0 w-1/2 bg-gray-50 h-full font-sans antialiased text-gray-900 pt-20 pl-24">
+        <div id="left-page-container" class="fixed top-0 left-0 w-1/2 bg-gray-50 h-full font-sans antialiased text-gray-900 pt-24 xl:pl-48 lg:pl-32"> <!-- start working on @media medium and smaller, it should look different-->
             
-            <a href="#right-page-beginning"><h1 class="text-5xl font-extrabold tracking-tight">Abdullah Dajani</h1></a>
-            <h2 class="text-2xl mt-2 font-semibold">Software Engineer</h2>
-            <h3 class="text-base text-gray-900 mt-3 font-light max-w-xs">I build pixel-perfect, engaging, and accessible digital experiences.</h3>
+            <a href="#right-page-beginning"><h1 class="text-5xl  max-w-sm font-extrabold tracking-tight">Abdullah Dajani</h1></a>
+            <h2 class="text-2xl mt-2 font-semibold max-w-xs ">Software Engineer</h2>
+            <h3 class="text-base  text-gray-900 mt-3 font-light max-w-xs">I build pixel-perfect, engaging, and accessible digital experiences.</h3>
             
-            <div id="navbar" class="mt-20 font-semibold text-sm text-gray-500">
+            <div id="navbar" class="mt-16 font-semibold text-sm text-gray-500">
                 <a href="#right-page-beginning" class="w-1/6 block py-3 hover:text-gray-900 transform transition-transform duration-300 hover:translate-x-8 cursor-pointer">ABOUT</a>
                 <a href="#right-page-mid" class="w-1/4 block py-3 hover:text-gray-900 transform transition-transform duration-300 hover:translate-x-8 cursor-pointer">EXPERIENCE</a>
                 <a class="w-1/5 block py-3 hover:text-gray-900 transform transition-transform duration-300 hover:translate-x-8 cursor-pointer">PROJECTS</a>
@@ -48,8 +48,8 @@
         <div id="right-page-container" class="fixed overflow-y-scroll scroll-smooth top-0 right-0 w-1/2 bg-gray-50 h-full font-sans antialiased text-gray-900 pr-20">
 
             <!-- About paragraphs -->
-            <div id="right-page-beginning" class="pt-20"></div>
-            <div id="about-para" class="text-base pl-3 leading-relaxed pt-1 font-light">
+            <div id="right-page-beginning" class="pt-24"></div>
+            <div id="about-para" class="text-base pl-3 leading-relaxed font-light max-w-xl">
                 <p class="">
                     Back in 2012, I decided to try my hand at creating custom Tumblr themes and tumbled 
                     head first into the rabbit hole of codingand web development. Fast-forward to today,
@@ -70,7 +70,8 @@
             </div>
 
             <!-- Experience Cards -->
-            <div id="right-page-mid" class=" pt-2 mt-36"></div>
+            <div class="max-w-xl">
+            <div id="right-page-mid" class=" pt-2 mt-32"></div>
             <div id="experience-card-1" class="group cursor-pointer hover:bg-customNavy transform duration-150 pl-3 rounded-lg">
                 <div id="experience-cards-head" class="mt-10 pt-4 text-left flex flex-row">
                     <p class=" w-24 text-xs items-top group-hover:text-gray-400 text-gray-700 leading-relaxed font-bold">2024 &#8212; PRESENT</p>
@@ -130,7 +131,7 @@
                     <p>Coded from scratch in <a href="https://code.visualstudio.com/" class="font-bold hover:text-black cursor-pointer">Visual Studio Code</a> by Abdullah Dajani. Built with <a href="https://react.dev" class="font-bold hover:text-black cursor-pointer">React</a> and <a href="https://tailwindcss.com/" class="cursor-pointer hover:text-black font-bold">Tailwind CSS</a>.</p>
                 </div>
             </footer>
-
+        </div>
         </div>
     </section>
 
