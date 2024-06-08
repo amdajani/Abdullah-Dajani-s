@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abdullah Dajani</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
+
   <link href="styles.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-  
 
 <body class="bg-gray-50 overflow-x-hidden">
     <!-- Left half body -->
@@ -24,7 +24,7 @@
             <div id="navbar" class="hidden lg:block lg:mt-16 font-semibold text-sm text-gray-500">
                 <a href="#right-page-beginning" class="w-1/6 block py-3 hover:text-gray-900 transform transition-transform duration-300 hover:translate-x-8 cursor-pointer">ABOUT</a>
                 <a href="#right-page-mid" class="w-1/4 block py-3 hover:text-gray-900 transform transition-transform duration-300 hover:translate-x-8 cursor-pointer">EXPERIENCE</a>
-                <a class="w-1/5 block py-3 hover:text-gray-900 transform transition-transform duration-300 hover:translate-x-8 cursor-pointer">PROJECTS</a>
+                <a href="#right-page-projects" class="w-1/5 block py-3 hover:text-gray-900 transform transition-transform duration-300 hover:translate-x-8 cursor-pointer">PROJECTS</a>
             </div>
 
             <footer>
@@ -49,10 +49,9 @@
     <section id="right-page">
         <div id="right-page-container" class="lg:fixed lg:pl-3 pl-6 pr-6 lg:overflow-y-scroll overflow-hidden scroll-smooth top-0 right-0 lg:w-1/2 sm:w-full h-full font-sans antialiased text-gray-900 lg:pr-20 sm:flex sm:flex-col">
 
-
             <!-- About paragraphs -->
             <div id="right-page-beginning" class="lg:pt-24"></div>
-            <div class="lg:hidden  mt-28 mb-8 text-gray-900 font-bold text-xl"><h2>About</h2></div>
+            <div class="lg:hidden mt-28 mb-8 text-gray-900 font-bold text-lg"><h2>ABOUT</h2></div>
             <div id="about-para" class="text-base leading-relaxed font-light lg:max-w-xl lg:space-y-6 space-y-4">
                 <p>
                     Back in 2012, I decided to try my hand at creating custom Tumblr themes and tumbled 
@@ -75,67 +74,95 @@
 
             <!-- Experience Cards -->
             <div id="right-page-mid" class="lg:pt-2 lg:mt-32"></div>
-            <div class="lg:hidden"><h2 class=" lg:hidden mt-20 mb-6 text-gray-900 font-bold text-xl">Experience</h2></div>
-            <div class="lg:max-w-xl space-y-8">
-                
-                <!-- 1st Experience Card-->
-                <div id="experience-card-1" class="group cursor-pointer hover:bg-customNavy transform duration-150 rounded-lg px-2">
-                    <div id="experience-cards-head" class="pt-4 text-left flex flex-row">
-                        <p class=" w-24 text-xs items-top group-hover:text-gray-400 text-gray-700 leading-relaxed font-bold">2024 &#8212; PRESENT</p>
-                        <h1 class="text-base text-gray-900 group-hover:text-white ml-2 leading-relaxed font-semibold">Senior Frontend Engineer • Apple</h1>
-                        <i class="fa-solid group-hover:text-white pt-1.5 fa-arrow-up-right-from-square font-thin pl-2 text-sm"></i>
-                    </div>
+                <div class="lg:hidden"><h2 class=" lg:hidden mt-20 mb-6 text-gray-900 font-bold text-lg">EXPERIENCE</h2></div>
+                <div class="lg:max-w-xl space-y-8">
                     
-                    <div id="experience-cards-content" class="text-sm pb-3 ml-24 items-center text-left font-normal text-gray-900 leading-relaxed">
-                        <p class="ml-2 group-hover:text-gray-200 font-light">Build and maintain critical components used to construct Klayviou\s frontend, across the whole product.</p>
-                        <div id="relevant-skills" class=" flex flex-row ml-2 mt-4">
-                            <p class=" bg-yellow-400 font-semibold rounded-2xl py-1 px-2 ">JavaScript</p>
-                            <p class=" rounded-2xl py-1 ml-2 px-2 bg-yellow-400 font-semibold">Python</p>
-                            <p class=" rounded-2xl py-1 ml-2 px-2  bg-yellow-400 font-semibold">C</p>
+                    <!-- 1st Experience Card-->
+                    <div id="project-card-1" class="group cursor-pointer hover:bg-customNavy transform duration-150 rounded-lg px-2">
+                        <div id="experience-cards-head" class="pt-4 text-left flex flex-row">
+                            <p class="w-24 text-xs items-top group-hover:text-gray-400 text-gray-700 leading-relaxed font-bold">2024 &#8212; PRESENT</p>
+                            <h1 class="text-base text-gray-900 group-hover:text-white ml-2 leading-relaxed font-semibold">Senior Frontend Engineer • Apple</h1>
+                            <i class="fa-solid group-hover:text-white pt-1.5 fa-arrow-up-right-from-square font-thin pl-2 text-sm"></i>
+                        </div>
+                        
+                        <div id="experience-cards-content" class="text-sm pb-3 ml-24 items-center text-left font-normal text-gray-900 leading-relaxed">
+                            <p class="ml-2 group-hover:text-gray-200 font-light">Build and maintain critical components used to construct Klayviou\s frontend, across the whole product.</p>
+                            <div id="relevant-skills" class=" flex flex-row ml-2 mt-4">
+                                <p class=" bg-yellow-400 font-semibold rounded-2xl py-1 px-2 ">JavaScript</p>
+                                <p class=" rounded-2xl py-1 ml-2 px-2 bg-yellow-400 font-semibold">Python</p>
+                                <p class=" rounded-2xl py-1 ml-2 px-2  bg-yellow-400 font-semibold">C</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2nd Experience Card-->
+                    <div id="experience-card-2" class="group cursor-pointer hover:bg-customNavy transform duration-150 rounded-lg px-2">
+                        <div id="experience-cards-head" class=" pt-4 text-left flex flex-row">
+                            <p class=" w-24 text-xs items-top group-hover:text-gray-400 text-gray-700 leading-relaxed font-bold">2024 &#8212; PRESENT</p>
+                            <h1 class="text-base text-gray-900 group-hover:text-white ml-2 leading-relaxed font-semibold">Senior Frontend Engineer • Apple</h1>
+                            <i class="fa-solid group-hover:text-white pt-1.5 fa-arrow-up-right-from-square font-thin pl-2 text-sm"></i>
+                        </div>
+                        
+                        <div id="experience-cards-content" class="text-sm pb-3 ml-24 items-center text-left font-normal text-gray-900 leading-relaxed">
+                            <p class="ml-2 group-hover:text-gray-200 font-light">Build and maintain critical components used to construct Klayviou\s frontend, across the whole product.</p>
+                            <div id="relevant-skills" class=" flex flex-row ml-2 mt-4">
+                                <p class=" bg-yellow-400 font-semibold rounded-2xl py-1 px-2 ">JavaScript</p>
+                                <p class=" rounded-2xl py-1 ml-2 px-2 bg-yellow-400 font-semibold">Python</p>
+                                <p class=" rounded-2xl py-1 ml-2 px-2  bg-yellow-400 font-semibold">C</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- 3rd Experience Card-->
+                    <div id="experience-card-3" class="group cursor-pointer hover:bg-customNavy transform duration-150 rounded-lg px-2">
+                        <div id="experience-cards-head" class="pt-4 text-left flex flex-row">
+                            <p class=" w-24 text-xs items-top group-hover:text-gray-400 text-gray-700 leading-relaxed font-bold">2024 &#8212; PRESENT</p>
+                            <h1 class="text-base text-gray-900 group-hover:text-white ml-2 leading-relaxed font-semibold">Senior Frontend Engineer • Apple</h1>
+                            <i class="fa-solid group-hover:text-white pt-1.5 fa-arrow-up-right-from-square font-thin pl-2 text-sm"></i>
+                        </div>
+                        
+                        <div id="experience-cards-content" class="text-sm pb-3 ml-24 items-center text-left font-normal text-gray-900 leading-relaxed">
+                            <p class="ml-2 group-hover:text-gray-200 font-light">Build and maintain critical components used to construct Klayviou\s frontend, across the whole product.</p>
+                            <div id="relevant-skills" class="flex flex-row ml-2 mt-4">
+                                <p class=" bg-yellow-400 font-semibold rounded-2xl py-1 px-2 ">JavaScript</p>
+                                <p class=" rounded-2xl py-1 ml-2 px-2  bg-yellow-400 font-semibold">Python</p>
+                                <p class=" rounded-2xl py-1 ml-2 px-2  bg-yellow-400 font-semibold">C</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- 2nd Experience Card-->
-                <div id="experience-card-2" class="group cursor-pointer hover:bg-customNavy transform duration-150 rounded-lg px-2">
-                    <div id="experience-cards-head" class=" pt-4 text-left flex flex-row">
-                        <p class=" w-24 text-xs items-top group-hover:text-gray-400 text-gray-700 leading-relaxed font-bold">2024 &#8212; PRESENT</p>
-                        <h1 class="text-base text-gray-900 group-hover:text-white ml-2 leading-relaxed font-semibold">Senior Frontend Engineer • Apple</h1>
-                        <i class="fa-solid group-hover:text-white pt-1.5 fa-arrow-up-right-from-square font-thin pl-2 text-sm"></i>
-                    </div>
+                <!-- Projects -->
+                <div id="right-page-projects" class="lg:pt-2 lg:mt-32"></div>
+                <div class="lg:hidden"><h2 class=" lg:hidden mt-20 mb-6 text-gray-900 font-bold text-lg">PROJECTS</h2></div>
+                <div class="lg:max-w-xl space-y-8">
                     
-                    <div id="experience-cards-content" class="text-sm pb-3 ml-24 items-center text-left font-normal text-gray-900 leading-relaxed">
-                        <p class="ml-2 group-hover:text-gray-200 font-light">Build and maintain critical components used to construct Klayviou\s frontend, across the whole product.</p>
-                        <div id="relevant-skills" class=" flex flex-row ml-2 mt-4">
-                            <p class=" bg-yellow-400 font-semibold rounded-2xl py-1 px-2 ">JavaScript</p>
-                            <p class=" rounded-2xl py-1 ml-2 px-2 bg-yellow-400 font-semibold">Python</p>
-                            <p class=" rounded-2xl py-1 ml-2 px-2  bg-yellow-400 font-semibold">C</p>
+                    <!-- 1st Project Card-->
+                    <div id="experience-card-1" class="group cursor-pointer hover:bg-customNavy transform duration-150 rounded-lg px-2">
+                        <div id="experience-cards-head" class="pt-4 text-center flex flex-row">
+                            <h1 class="text-base text-gray-900 group-hover:text-white leading-relaxed font-semibold">Build a Spotify</h1>
+                            <i class="fa-solid group-hover:text-white pt-1.5 fa-arrow-up-right-from-square font-thin pl-2 text-sm"></i>
+                        </div>
+                        
+                        <div id="experience-cards-content" class="text-sm pb-3 items-center text-left font-normal text-gray-900 leading-relaxed mt-2">
+                            <p class="group-hover:text-gray-200 font-light">Build and maintain critical components used to construct Klayvio frontend, across the whole product.</p>
+                            
+                                <div id="relevant-skills" class="flex my-4 flex-row space-x-2">
+                                    <p class=" bg-yellow-400 font-semibold rounded-2xl py-1 px-2">JavaScript</p>
+                                    <p class=" rounded-2xl py-1 px-2 bg-yellow-400 font-semibold">Python</p>
+                                    <p class=" rounded-2xl py-1 px-2  bg-yellow-400 font-semibold">C</p>
+                                </div>
+                                <div class="flex flex-row  space-x-2">
+                                    <img width="120" height="38" href="" src="images/test1.png" alt="project image" class="rounded border-2 border-slate-200/100">
+                                    <img width="120" height="38" href="" src="images/test1.png" alt="project image" class="rounded border-2 border-slate-200/100">
+                                </div>
                         </div>
                     </div>
                 </div>
-            
-                <!-- 3rd Experience Card-->
-                <div id="experience-card-3" class="group cursor-pointer hover:bg-customNavy transform duration-150 rounded-lg px-2">
-                    <div id="experience-cards-head" class="pt-4 text-left flex flex-row">
-                        <p class=" w-24 text-xs items-top group-hover:text-gray-400 text-gray-700 leading-relaxed font-bold">2024 &#8212; PRESENT</p>
-                        <h1 class="text-base text-gray-900 group-hover:text-white ml-2 leading-relaxed font-semibold">Senior Frontend Engineer • Apple</h1>
-                        <i class="fa-solid group-hover:text-white pt-1.5 fa-arrow-up-right-from-square font-thin pl-2 text-sm"></i>
-                    </div>
-                    
-                    <div id="experience-cards-content" class="text-sm pb-3 ml-24 items-center text-left font-normal text-gray-900 leading-relaxed">
-                        <p class="ml-2 group-hover:text-gray-200 font-light">Build and maintain critical components used to construct Klayviou\s frontend, across the whole product.</p>
-                        <div id="relevant-skills" class="flex flex-row ml-2 mt-4">
-                            <p class=" bg-yellow-400 font-semibold rounded-2xl py-1 px-2 ">JavaScript</p>
-                            <p class=" rounded-2xl py-1 ml-2 px-2  bg-yellow-400 font-semibold">Python</p>
-                            <p class=" rounded-2xl py-1 ml-2 px-2  bg-yellow-400 font-semibold">C</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <!-- footer & rigts-->
             <footer id="right-page-footer">    
-                <div class="items-center lg:mt-40 mt-10 mb-5 lg:mb-20 bottom-0 text-sm font-light text-gray-500">
+                <div class="items-center lg:mt-40 mt-10 mb-5 xl:mr-20 lg:mb-20 bottom-0 text-sm font-light text-gray-500">
                     <p>Coded from scratch in <a href="https://code.visualstudio.com/" class="font-bold hover:text-black cursor-pointer">Visual Studio Code</a> by Abdullah Dajani. Built with <a href="https://react.dev" class="font-bold hover:text-black cursor-pointer">React</a> and <a href="https://tailwindcss.com/" class="cursor-pointer hover:text-black font-bold">Tailwind CSS</a>.</p>
                 </div>
             </footer>
@@ -146,25 +173,44 @@
         document.addEventListener('DOMContentLoaded', function()
         {
             const links = document.querySelectorAll('#navbar a');
+            const aboutSection = document.querySelector('#right-page-beginning');
+            const experienceSection = document.querySelector('#right-page-mid');
+            const projectSection = document.querySelector('#right-page-projects');
             
         
-            links.forEach(link =>
-            {
-            link.addEventListener('click', function(event) {
-                // Remove active classes from all links
-                links.forEach(l => l.classList.remove('text-gray-900', 'translate-x-8'));
-                // Add active classes to the clicked link
-                event.currentTarget.classList.add('text-gray-900', 'translate-x-8');
-            });
+            links.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    // Remove active classes from all links
+                    links.forEach(l => l.classList.remove('text-gray-900', 'translate-x-8'));
+                    // Add active classes to the clicked link
+                 event.currentTarget.classList.add('text-gray-900', 'translate-x-8');
+                });
             });
         
             // Automatically select the "ABOUT" link on page load
-            const aboutLink = document.querySelector('#navbar a');
-            if (aboutLink) {
-            aboutLink.classList.add('text-gray-900', 'translate-x-8');
-            }
+            links[0].classList.add('text-gray-900', 'translate-x-8');
+            
+            document.addEventListener('scroll', function () {
+    const scrollPosition = window.scrollY;
+    const aboutSectionTop = aboutSection.getBoundingClientRect().top;
+    const experienceSectionTop = experienceSection.getBoundingClientRect().top;
+    const projectSectionTop = projectSection.getBoundingClientRect().top;
+
+    if (scrollPosition >= projectSectionTop) {
+        links.forEach(l => l.classList.remove('text-gray-900', 'translate-x-8'));
+        links[2].classList.add('text-gray-900', 'translate-x-8');
+    } else if (scrollPosition >= experienceSectionTop) {
+        // Highlight "EXPERIENCE" link
+        links.forEach(l => l.classList.remove('text-gray-900', 'translate-x-8'));
+        links[1].classList.add('text-gray-900', 'translate-x-8');
+    } else if (scrollPosition >= aboutSectionTop) {
+        // Highlight "ABOUT" link
+        links.forEach(l => l.classList.remove('text-gray-900', 'translate-x-8'));
+        links[0].classList.add('text-gray-900', 'translate-x-8');
+    }
+            });
         });
     </script>
-    
+
 </body>
 </html>
