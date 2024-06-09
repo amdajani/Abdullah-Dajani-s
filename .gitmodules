@@ -3,3 +3,6 @@
 	url = https://github.com/amdajani/Portfolio-Website.git
 [submodule "projects/portfolio-website"]
 	path = projects/new-directory-name
+[submodule "personal-website/portfolio-website"]
+	path = personal-website/portfolio-website
+	url = https://github.com/amdajani/portfolio-website.git
