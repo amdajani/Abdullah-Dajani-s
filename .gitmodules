@@ -6,3 +6,6 @@
 [submodule "personal-website/portfolio-website"]
 	path = personal-website/portfolio-website
 	url = https://github.com/amdajani/portfolio-website.git
+[submodule "portfolio-website"]
+	path = portfolio-website
+	url = https://github.com/amdajani/portfolio-website.git
