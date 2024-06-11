@@ -17,6 +17,11 @@ def home():
     return render_template('index.html')
 
 
+@app.route("/hackathon")
+def hackathon():
+    return redirect("https://www.linkedin.com/feed/update/urn:li:activity:6947073917517733888/")
+
+
 @app.route("/credit", methods=["GET", "POST"])
 def credit():
     if request.method == "GET":
