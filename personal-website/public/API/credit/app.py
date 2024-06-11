@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session
+from flask import Flask, render_template, request, session, jsonify
 from jinja2 import FileSystemLoader
 from jinja2.environment import Environment
 from helpers import checksum, card_type
@@ -22,33 +22,23 @@ def credit():
     if request.method == "GET":
         return render_template("credit.html")
 
-    credit_card = request.form.get("credit_card")
+    data = request.get_json()
+    credit_card = data.get("credit_card")
 
     if not credit_card:
-        return 404
+        return jsonify({'status': 'error', 'message': '*Invalid Credit Card'}), 400
     
     try:
         credit_card = int(credit_card)
     except ValueError:
-        return 404
-
+        return jsonify({'status': 'error', 'message': '*Numbers must be integers'}), 400    
     if credit_card <= 0:
-        return 404
+        return jsonify({'status': 'error', 'message': '*Cannot be negative'}), 400
 
     if not checksum(credit_card):
-        return 404
+        return jsonify({'status': 'error', 'message': '*Invalid Credit Card'}), 400
 
-    card_type = card_type(credit_card)
-
-    user_id = session["user_id"]
-    if user_id:
-        db = sqlite3.connect
-        cursor = db.cursor()
-        db.execute("INSERT INTO credit_log (user_id, credit_card, card_type) VALUES (?, ?, ?)", user_id, int(credit_card), card_type)
-        db.commit()
-        db.close
-
-    return 200
+    return jsonify({'status': 'success', 'message': 'Valid'}), 200
     
 
 if __name__ == "__main__":
