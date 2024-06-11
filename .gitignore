@@ -1,2 +1,8 @@
 .venv
 .env
+
+# Ignore node_modules
+node_modules/
+
+# Ignore other common files
+.DS_Store
