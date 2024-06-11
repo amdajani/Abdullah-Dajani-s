@@ -8,7 +8,7 @@
     <meta name="keywords" content="Abdullah Dajani, Software Engineer, Portfolio, Web Development, JavaScript, Tailwind CSS, Flask">
     <meta name="author" content="Abdullah Dajani">
 
-    <title>Abdullah Dajani {% block title %}{% endblock %}</title>
+    <title>Credit Card API</title>
 
     <!-- Tailwind CSS link-->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
@@ -33,7 +33,62 @@
     <meta name="twitter:description" content="Personal portfolio website of Abdullah Dajani. I build pixel-perfect, engaging, and accessible digital experiences.">
     <meta name="twitter:image" content="/public/images/twitter-card.jpg"> -->
 </head>
-<body>
-  test1
+<body class="bg-gray-50 flex flex-col items-center justify-center h-screen overflow-hidden font-sans antialiased text-gray-900 px-40">
+  
+  <div class="bg-gray-900 text-gray-50 flex flex-col items-center justify-center mb-40 rounded-lg p-5 pb-10">
+    <h2 class="font-bold text-2xl text-center">Enter Credit Card Number</h2>
+    <form id="creditForm" method="POST" class="flex flex-row justify-center items-center px-4">
+      <input type="text" id="credit_card" name="credit_card" placeholder="Credit Card Number" class="my-8 py-2 px-7 mx-2 text-base bg-blue text-gray-900 rounded-2xl">
+      <i id="validityIcon"></i> 
+    </form>
+    <div id="error_message" class="text-red-500 font-bold text-sm pl-7 w-full"></div>
+  </div>
+
+  <!-- footer & rigts-->
+    <footer class="w-full fixed bottom-0 px-20">    
+      <div class="flex items-center justify-center mt-10 mb-5 text-sm font-light text-gray-500 w-full">
+        <p class="text-center">Coded from scratch in <a href="https://code.visualstudio.com/" target="_blank" class="font-bold hover:text-black cursor-pointer">Visual Studio Code</a> by Abdullah Dajani. Built with <a href="https://www.javascript.com/" target="_blank" class="font-bold hover:text-black cursor-pointer">Javascript</a>, <a href="https://flask.palletsprojects.com/en/3.0.x/" target="_blank" class="font-bold hover:text-black cursor-pointer">Flask</a>, and <a href="https://tailwindcss.com/" target="_blank" class="cursor-pointer hover:text-black font-bold">Tailwind CSS</a>.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+  const creditCardInput = document.getElementById('credit_card');
+
+  creditCardInput.addEventListener('input', function() {
+    const creditCardNumber = creditCardInput.value;
+
+    fetch('/credit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ credit_card: creditCardNumber })
+    })
+    .then(response => response.json())
+    .then(data => {
+      const errorMessageElement = document.getElementById('error_message');
+      const validityIcon = document.getElementById('validityIcon');
+      if (data.status === 'error') {
+        errorMessageElement.textContent = data.message;
+        errorMessageElement.classList.remove('text-green-500');
+        errorMessageElement.classList.add('text-red-500');
+        validityIcon.className = 'fa-solid fa-circle-xmark text-red-500';
+      } else {
+        errorMessageElement.textContent = 'Credit card is valid';
+        errorMessageElement.classList.remove('text-red-500');
+        errorMessageElement.classList.add('text-green-500');
+        validityIcon.className = 'fa-solid fa-circle-check text-green-500';
+        
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+  });
+});
+
+    </script>
+    
 </body>
 </html>

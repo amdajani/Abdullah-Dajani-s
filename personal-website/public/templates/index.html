@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Personal portfolio website of Abdullah Dajani. I build pixel-perfect, engaging, and accessible digital experiences.">
+    <meta name="description" content="Personal portfolio website of Abdullah Dajani. I build interactive and user-friendly digital solutions.">
     <meta name="keywords" content="Abdullah Dajani, Software Engineer, Portfolio, Web Development, JavaScript, Tailwind CSS, Flask">
     <meta name="author" content="Abdullah Dajani">
 
-    <title>Abdullah Dajani {% block title %}{% endblock %}</title>
+    <title>Abdullah Dajani</title>
 
     <!-- Tailwind CSS link-->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
@@ -22,7 +22,7 @@
 
       <!-- Open Graph Meta Tags for better social sharing -->
     <meta property="og:title" content="Abdullah Dajani">
-    <meta property="og:description" content="Personal portfolio website of Abdullah Dajani. I build pixel-perfect, engaging, and accessible digital experiences.">
+    <meta property="og:description" content="Personal portfolio website of Abdullah Dajani. I build interactive and user-friendly digital solutions.">
     <!-- <meta property="og:image" content="/public/images/og-image.jpg"> -->
     <meta property="og:url" content="https://amdajani.com">
     <meta property="og:type" content="website">
@@ -30,7 +30,7 @@
      <!-- Twitter Card Meta Tags for better social sharing EDIT IT LATER
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Abdullah Dajani">
-    <meta name="twitter:description" content="Personal portfolio website of Abdullah Dajani. I build pixel-perfect, engaging, and accessible digital experiences.">
+    <meta name="twitter:description" content="Personal portfolio website of Abdullah Dajani. I build interactive and user-friendly digital solutions.">
     <meta name="twitter:image" content="/public/images/twitter-card.jpg"> -->
 </head>
 
@@ -42,7 +42,7 @@
             
             <a href="#right-page-beginning"><h1 class="lg:text-5xl text-4xl font-extrabold  max-w-auto tracking-tight">Abdullah Dajani</h1></a>
             <h2 class="lg:text-2xl text-xl font-semibold mt-3">Software Engineer</h2>
-            <h3 class="lg:text-base text-gray-900 font-light max-w-xs mt-4">I build pixel-perfect, engaging, and accessible digital experiences.</h3>
+            <h3 class="lg:text-base text-gray-900 font-light max-w-xs mt-4">I build interactive and user-friendly digital solutions.</h3>
 
             <!-- Navbar -->
             <div id="navbar" class="hidden lg:block lg:mt-16 font-semibold text-sm text-gray-500">
@@ -78,22 +78,19 @@
             <div class="lg:hidden mt-28 mb-8 text-gray-900 font-bold text-lg"><h2>ABOUT</h2></div>
             <div id="about-para" class="text-base leading-relaxed font-light lg:max-w-xl lg:space-y-6 space-y-4">
                 <p>
-                    Back in 2012, I decided to try my hand at creating custom Tumblr themes and tumbled 
-                    head first into the rabbit hole of codingand web development. Fast-forward to today,
-                    and I’ve had the privilege of building software for an advertising agency, a start-up,
-                    a huge corporation, and a digital product studio.
-                    </p>
-                    <p class="">
-                    My main focus these days is building accessible user interfaces for our customers at
-                    Klaviyo. I most enjoy building software in the sweet spot where design and engineering
-                    meet — things that look good but are also built well under the hood. In my free time,
-                    I've also released an online video course that covers everything you need to know to
-                    build a web app with the Spotify API.
-                    </p>
-                    <p>
-                    When I’m not at the computer, I’m usually rock climbing, reading, hanging out with my
-                        wife and two cats, or running around Hyrule searching for Korok seeds.
-                    </p>
+                    Despite initially pursuing Mechanical Engineering and the big engineering hackathon win in June 2022,
+                    I made the pivotal decision to transition into the field of computers. Embracing the spirit that it is
+                    never too late, I am eager to embarked on this journey.
+                </p>
+                <p>
+                    Now, driven by my enthusiasm for problem-solving, I am dedicated to creating accessible and engaging
+                    software solutions. As a full-stack developer with a flair for design and art, I'm particularly passionate
+                    about tech startups. With the skills I am honing every day, I eagerly anticipate my next challenge. Embracing
+                    the belief that it's never too late, I am diving into this field with full enthusiasm and dedication.
+                </p>
+                <p>
+                    Aside from the computer, I am into deep talks, sports, and new experiences ;).
+                </p>
             </div>
 
             <!-- Experience Cards -->
@@ -102,58 +99,30 @@
                 <div class="lg:max-w-xl space-y-8">
                     
                     <!-- 1st Experience Card-->
-                    <div id="project-card-1" class="group cursor-pointer hover:bg-customNavy transform duration-150 rounded-lg px-2">
+                    <a href="#right-page-projects"><div id="project-card-1" class="group cursor-pointer hover:bg-customNavy transform duration-150 rounded-lg px-2">
                         <div id="experience-cards-head" class="pt-4 text-left flex flex-row">
                             <p class="w-24 text-xs items-top group-hover:text-gray-400 text-gray-700 leading-relaxed font-bold">2024 &#8212; PRESENT</p>
-                            <h1 class="text-base text-gray-900 group-hover:text-white ml-2 leading-relaxed font-semibold">Senior Frontend Engineer • Apple</h1>
+                            <h1 class="text-base text-gray-900 group-hover:text-white ml-2 leading-relaxed font-semibold">Software Developer • Freelancer</h1>
                             <i class="fa-solid group-hover:text-white pt-1.5 fa-arrow-up-right-from-square font-thin pl-2 text-sm"></i>
                         </div>
                         
                         <div id="experience-cards-content" class="text-sm pb-3 ml-24 items-center text-left font-normal text-gray-900 leading-relaxed">
-                            <p class="ml-2 group-hover:text-gray-200 font-light">Build and maintain critical components used to construct Klayviou\s frontend, across the whole product.</p>
-                            <div id="relevant-skills" class=" flex flex-row ml-2 mt-4">
-                                <p class=" bg-yellow-400 font-semibold rounded-2xl py-1 px-2 ">JavaScript</p>
-                                <p class=" rounded-2xl py-1 ml-2 px-2 bg-yellow-400 font-semibold">Python</p>
-                                <p class=" rounded-2xl py-1 ml-2 px-2  bg-yellow-400 font-semibold">C</p>
-                            </div>
-                        </div>
-                    </div>
+                            <p class="ml-2 group-hover:text-gray-200 font-light">Build and maintain critical components to construct a web application from the back end to the front end.</p>
 
-                    <!-- 2nd Experience Card-->
-                    <div id="experience-card-2" class="group cursor-pointer hover:bg-customNavy transform duration-150 rounded-lg px-2">
-                        <div id="experience-cards-head" class=" pt-4 text-left flex flex-row">
-                            <p class=" w-24 text-xs items-top group-hover:text-gray-400 text-gray-700 leading-relaxed font-bold">2024 &#8212; PRESENT</p>
-                            <h1 class="text-base text-gray-900 group-hover:text-white ml-2 leading-relaxed font-semibold">Senior Frontend Engineer • Apple</h1>
-                            <i class="fa-solid group-hover:text-white pt-1.5 fa-arrow-up-right-from-square font-thin pl-2 text-sm"></i>
+                            <div id="relevant-skills" class="flex my-4 flex-wrap items-center">
+                                    <p class=" bg-yellow-400 font-semibold rounded-2xl py-1 px-2 mr-2 mt-1">Flask</p>
+                                    <p class=" rounded-2xl py-1 px-2  bg-yellow-400 font-semibold mr-2 mt-1">Python</p>
+                                    <p class=" rounded-2xl py-1 px-2 bg-yellow-400 font-semibold mr-2 mt-1">Javasript</p>
+                                    <p class=" rounded-2xl py-1 px-2 bg-yellow-400 font-semibold mr-2 mt-1">MySQL</p>
+                                    <p class=" rounded-2xl py-1 px-2  bg-yellow-400 font-semibold mr-2 mt-1">Tailwind CSS</p>
+                                    <p class=" rounded-2xl py-1 px-2  bg-yellow-400 font-semibold mr-2 mt-1">HTML5</p>
+                                    <p class=" rounded-2xl py-1 px-2  bg-yellow-400 font-semibold mr-2 mt-1">SEO</p>
+                                    <p class=" rounded-2xl py-1 px-2  bg-yellow-400 font-semibold mr-2 mt-1">Graphic Design</p>
+                                </div>
                         </div>
-                        
-                        <div id="experience-cards-content" class="text-sm pb-3 ml-24 items-center text-left font-normal text-gray-900 leading-relaxed">
-                            <p class="ml-2 group-hover:text-gray-200 font-light">Build and maintain critical components used to construct Klayviou\s frontend, across the whole product.</p>
-                            <div id="relevant-skills" class=" flex flex-row ml-2 mt-4">
-                                <p class=" bg-yellow-400 font-semibold rounded-2xl py-1 px-2 ">JavaScript</p>
-                                <p class=" rounded-2xl py-1 ml-2 px-2 bg-yellow-400 font-semibold">Python</p>
-                                <p class=" rounded-2xl py-1 ml-2 px-2  bg-yellow-400 font-semibold">C</p>
-                            </div>
-                        </div>
-                    </div>
-                
-                    <!-- 3rd Experience Card-->
-                    <div id="experience-card-3" class="group cursor-pointer hover:bg-customNavy transform duration-150 rounded-lg px-2">
-                        <div id="experience-cards-head" class="pt-4 text-left flex flex-row">
-                            <p class=" w-24 text-xs items-top group-hover:text-gray-400 text-gray-700 leading-relaxed font-bold">2024 &#8212; PRESENT</p>
-                            <h1 class="text-base text-gray-900 group-hover:text-white ml-2 leading-relaxed font-semibold">Senior Frontend Engineer • Apple</h1>
-                            <i class="fa-solid group-hover:text-white pt-1.5 fa-arrow-up-right-from-square font-thin pl-2 text-sm"></i>
-                        </div>
-                        
-                        <div id="experience-cards-content" class="text-sm pb-3 ml-24 items-center text-left font-normal text-gray-900 leading-relaxed">
-                            <p class="ml-2 group-hover:text-gray-200 font-light">Build and maintain critical components used to construct Klayviou\s frontend, across the whole product.</p>
-                            <div id="relevant-skills" class="flex flex-row ml-2 mt-4">
-                                <p class=" bg-yellow-400 font-semibold rounded-2xl py-1 px-2 ">JavaScript</p>
-                                <p class=" rounded-2xl py-1 ml-2 px-2  bg-yellow-400 font-semibold">Python</p>
-                                <p class=" rounded-2xl py-1 ml-2 px-2  bg-yellow-400 font-semibold">C</p>
-                            </div>
-                        </div>
-                    </div>
+                    </div></a>
+
+                    
                 </div>
 
                 <!-- Projects -->
@@ -162,35 +131,34 @@
                 <div class="lg:max-w-xl space-y-8">
                     
                     <!-- 1st Project Card-->
-                    <a href="/API/credit/templates/credit.html">
+                    <a href="/credit">
                     <div id="experience-card-1" class="group cursor-pointer hover:bg-customNavy transform duration-150 rounded-lg px-2">
                         <div id="experience-cards-head" class="pt-4 text-center flex flex-row">
-                            <h1 class="text-base text-gray-900 group-hover:text-white leading-relaxed font-semibold">Build a Spotify</h1>
+                            <h1 class="text-base text-gray-900 group-hover:text-white leading-relaxed font-semibold">Credit Card API</h1>
                             <i class="fa-solid group-hover:text-white pt-1.5 fa-arrow-up-right-from-square font-thin pl-2 text-sm"></i>
                         </div>
                         
                         <div id="experience-cards-content" class="text-sm pb-3 items-center text-left font-normal text-gray-900 leading-relaxed mt-2">
-                            <p class="group-hover:text-gray-200 font-light">Build and maintain critical components used to construct Klayvio frontend, across the whole product.</p>
+                            <p class="group-hover:text-gray-200 font-light">Developed an API using Luhn's algorithm for credit card validation, identifying card types (VISA, AMEX, MASTERCARD) for valid cards.</p>
                             
-                                <div id="relevant-skills" class="flex my-4 flex-row space-x-2">
-                                    <p class=" bg-yellow-400 font-semibold rounded-2xl py-1 px-2">JavaScript</p>
-                                    <p class=" rounded-2xl py-1 px-2 bg-yellow-400 font-semibold">Python</p>
-                                    <p class=" rounded-2xl py-1 px-2  bg-yellow-400 font-semibold">C</p>
-                                </div>
-                                <div class="flex flex-row  space-x-2">
-                                    <img width="120" height="38" href="" src="../static/images/test1.png" alt="project image" class="rounded border-2 border-slate-200/100">
-                                    <img width="120" height="38" href="" src="../static/images/test1.png" alt="project image" class="rounded border-2 border-slate-200/100">
+                                <div id="relevant-skills" class="flex my-4 flex-wrap items-center">
+                                    <p class=" bg-yellow-400 font-semibold rounded-2xl py-1 px-2 mr-2 mt-1">Flask</p>
+                                    <p class=" rounded-2xl py-1 px-2  bg-yellow-400 font-semibold mr-2 mt-1">Python</p>
+                                    <p class=" rounded-2xl py-1 px-2 bg-yellow-400 font-semibold mr-2 mt-1">Javasript</p>
+                                    <p class=" rounded-2xl py-1 px-2 bg-yellow-400 font-semibold mr-2 mt-1">MySQL</p>
+                                    <p class=" rounded-2xl py-1 px-2  bg-yellow-400 font-semibold mr-2 mt-1">Tailwind CSS</p>
+                                    <p class=" rounded-2xl py-1 px-2  bg-yellow-400 font-semibold mr-2 mt-1">HTML5</p>
                                 </div>
                         </div>
-                    </div>
-                </div></a>
+                    </div></a>
+                </div>
                 
               
                 
             <!-- footer & rigts-->
             <footer id="right-page-footer">    
                 <div class="items-center lg:mt-40 mt-10 mb-5 xl:mr-20 lg:mb-20 bottom-0 text-sm font-light text-gray-500">
-                    <p>Coded from scratch in <a href="https://code.visualstudio.com/" class="font-bold hover:text-black cursor-pointer">Visual Studio Code</a> by Abdullah Dajani. Built with <a href="https://react.dev" class="font-bold hover:text-black cursor-pointer">React</a> and <a href="https://tailwindcss.com/" class="cursor-pointer hover:text-black font-bold">Tailwind CSS</a>.</p>
+                    <p class="text-center">Coded from scratch in <a href="https://code.visualstudio.com/" target="_blank" class="font-bold hover:text-black cursor-pointer">Visual Studio Code</a> by Abdullah Dajani. Built with <a href="https://www.javascript.com/" target="_blank" class="font-bold hover:text-black cursor-pointer">Javascript</a>, <a href="https://flask.palletsprojects.com/en/3.0.x/" target="_blank" class="font-bold hover:text-black cursor-pointer">Flask</a>, and <a href="https://tailwindcss.com/" target="_blank" class="cursor-pointer hover:text-black font-bold">Tailwind CSS</a>.</p>
                 </div>
             </footer>
         </div>

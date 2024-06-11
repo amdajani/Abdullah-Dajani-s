@@ -1,4 +1,66 @@
 Code_Dump.txt
 
 
-Tempelate for 
+Tempelate for projects:
+
+<!-- 1st Project Card-->
+                    <a href="/credit">
+                    <div id="experience-card-1" class="group cursor-pointer hover:bg-customNavy transform duration-150 rounded-lg px-2">
+                        <div id="experience-cards-head" class="pt-4 text-center flex flex-row">
+                            <h1 class="text-base text-gray-900 group-hover:text-white leading-relaxed font-semibold">Credit Card API</h1>
+                            <i class="fa-solid group-hover:text-white pt-1.5 fa-arrow-up-right-from-square font-thin pl-2 text-sm"></i>
+                        </div>
+                        
+                        <div id="experience-cards-content" class="text-sm pb-3 items-center text-left font-normal text-gray-900 leading-relaxed mt-2">
+                            <p class="group-hover:text-gray-200 font-light">Built a credit card validity checker API using Luhn's algorithm. The program also outputs the type of credit card (VISA, AMEX, MASTERCARD, etc.) if card is valid.</p>
+                            
+                                <div id="relevant-skills" class="flex my-4 flex-wrap items-center">
+                                    <p class=" bg-yellow-400 font-semibold rounded-2xl py-1 px-2 mr-2 mt-1">Flask</p>
+                                    <p class=" rounded-2xl py-1 px-2 bg-yellow-400 font-semibold mr-2 mt-1">Javasript</p>
+                                    <p class=" rounded-2xl py-1 px-2  bg-yellow-400 font-semibold mr-2 mt-1">Tailwind CSS</p>
+                                    <p class=" rounded-2xl py-1 px-2  bg-yellow-400 font-semibold mr-2 mt-1">HTML</p>
+                                </div>
+                                <div class="flex flex-row  space-x-2">
+                                    <img width="120" height="38" href="" src="../static/images/test1.png" alt="project image" class="rounded border-2 border-slate-200/100">
+                                    <img width="120" height="38" href="" src="../static/images/test1.png" alt="project image" class="rounded border-2 border-slate-200/100">
+                                </div>
+                        </div>
+                    </div></a>
+
+
+
+                    <!-- 2nd Experience Card-->
+                    <div id="experience-card-2" class="group cursor-pointer hover:bg-customNavy transform duration-150 rounded-lg px-2">
+                        <div id="experience-cards-head" class=" pt-4 text-left flex flex-row">
+                            <p class=" w-24 text-xs items-top group-hover:text-gray-400 text-gray-700 leading-relaxed font-bold">2024 &#8212; PRESENT</p>
+                            <h1 class="text-base text-gray-900 group-hover:text-white ml-2 leading-relaxed font-semibold">Senior Frontend Engineer • Apple</h1>
+                            <i class="fa-solid group-hover:text-white pt-1.5 fa-arrow-up-right-from-square font-thin pl-2 text-sm"></i>
+                        </div>
+                        
+                        <div id="experience-cards-content" class="text-sm pb-3 ml-24 items-center text-left font-normal text-gray-900 leading-relaxed">
+                            <p class="ml-2 group-hover:text-gray-200 font-light">Build and maintain critical components used to construct Klayviou\s frontend, across the whole product.</p>
+                            <div id="relevant-skills" class=" flex flex-row ml-2 mt-4">
+                                <p class=" bg-yellow-400 font-semibold rounded-2xl py-1 px-2 ">JavaScript</p>
+                                <p class=" rounded-2xl py-1 ml-2 px-2 bg-yellow-400 font-semibold">Python</p>
+                                <p class=" rounded-2xl py-1 ml-2 px-2  bg-yellow-400 font-semibold">C</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- 3rd Experience Card-->
+                    <div id="experience-card-3" class="group cursor-pointer hover:bg-customNavy transform duration-150 rounded-lg px-2">
+                        <div id="experience-cards-head" class="pt-4 text-left flex flex-row">
+                            <p class=" w-24 text-xs items-top group-hover:text-gray-400 text-gray-700 leading-relaxed font-bold">2024 &#8212; PRESENT</p>
+                            <h1 class="text-base text-gray-900 group-hover:text-white ml-2 leading-relaxed font-semibold">Senior Frontend Engineer • Apple</h1>
+                            <i class="fa-solid group-hover:text-white pt-1.5 fa-arrow-up-right-from-square font-thin pl-2 text-sm"></i>
+                        </div>
+                        
+                        <div id="experience-cards-content" class="text-sm pb-3 ml-24 items-center text-left font-normal text-gray-900 leading-relaxed">
+                            <p class="ml-2 group-hover:text-gray-200 font-light">Build and maintain critical components used to construct Klayviou\s frontend, across the whole product.</p>
+                            <div id="relevant-skills" class="flex flex-row ml-2 mt-4">
+                                <p class=" bg-yellow-400 font-semibold rounded-2xl py-1 px-2 ">JavaScript</p>
+                                <p class=" rounded-2xl py-1 ml-2 px-2  bg-yellow-400 font-semibold">Python</p>
+                                <p class=" rounded-2xl py-1 ml-2 px-2  bg-yellow-400 font-semibold">C</p>
+                            </div>
+                        </div>
+                    </div>
