@@ -26,7 +26,7 @@ def hackathon():
     return redirect("https://www.linkedin.com/feed/update/urn:li:activity:6947073917517733888/")
 
 
-@app.route("/credit", methods=["GET", "POST"])
+@app.route("/credit-card", methods=["GET", "POST"])
 def credit():
     if request.method == "GET":
         return render_template("credit.html")
