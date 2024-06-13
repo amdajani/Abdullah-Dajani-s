@@ -69,6 +69,7 @@
     <script>
     document.addEventListener('DOMContentLoaded', function() {
       const creditCardInput = document.getElementById('credit_card');
+      const creditForm = document.getElementById('creditForm');
 
       creditForm.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -108,7 +109,7 @@
         else if (data.type === 'MASTERCARD') {
           creditCardType.className = 'fa-brands fa-cc-mastercard';  
         }
-        else if (data.type === 'VISA') {
+        else if (data.type === 'AMEX') {
           creditCardType.className = 'fa-brands fa-cc-amex';
         }
       }

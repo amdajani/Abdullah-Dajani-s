@@ -1,5 +1,5 @@
 import sqlite3
-
+from uuid import uuid4
 
 # Luhn's Algorithm checksum function
 def checksum(credit_card):
@@ -40,3 +40,34 @@ def card_type(credit_card):
             return 'AMEX'
         return 0
     return 0
+
+# initializes an sqlite3 database
+def db_init():
+    connection = sqlite3.connect('credit_card.db')
+    cursor = connection.cursor()
+
+    cursor.execute('''
+    CREATE TABLE IF NOT EXISTS credit_cards (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id TEXT NOT NULL,
+    credit_card_hashed TEXT NOT NULL,
+    credit_card_type TEXT NOT NULL
+)
+''')
+
+    connection.commit()
+    connection.close()
+
+def insert_recorder(user_id, credit_card_hashed, credit_card_type):
+    connection = sqlite3.connect('credit_card.db')
+    cursor = connection.cursor()
+
+    cursor.execute("INSERT INTO credit_cards (user_id, credit_card_hashed, credit_card_type) VALUES (?, ?, ?)", (user_id, credit_card_hashed, credit_card_type))
+
+    connection.commit()
+    connection.close()
+
+def generate_user_id():
+    return str(uuid4())
+
+
