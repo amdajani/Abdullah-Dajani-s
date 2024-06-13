@@ -31,7 +31,7 @@ def credit():
     credit_card = data.get("credit_card")
 
     if not credit_card:
-        return jsonify({'status': 'error', 'message': '*Invalid Credit Card'}), 400
+        return jsonify({'status': 'error', 'message': '*Cannot be empty'}), 400
     
     try:
         credit_card = int(credit_card)
@@ -39,11 +39,18 @@ def credit():
         return jsonify({'status': 'error', 'message': '*Numbers must be integers'}), 400    
     if credit_card <= 0:
         return jsonify({'status': 'error', 'message': '*Cannot be negative'}), 400
-
+    if len(str(credit_card)) < 13:
+        return jsonify({'status': 'error', 'message': '*Invalid'}), 400
     if not checksum(credit_card):
-        return jsonify({'status': 'error', 'message': '*Invalid Credit Card'}), 400
+        return jsonify({'status': 'error', 'message': '*Invalid'}), 400
 
-    return jsonify({'status': 'success', 'message': 'Valid'}), 200
+    credit_card_type = card_type(str(credit_card))
+
+    if not credit_card_type:
+        return jsonify({'status': 'error', 'message': '*Card Must be VISA, MASTERCARD, or AMEX'}), 400
+    
+    
+    return jsonify({'status': 'success', 'message': 'Valid', 'type': credit_card_type}), 200
     
 
 if __name__ == "__main__":

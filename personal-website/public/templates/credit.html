@@ -33,29 +33,48 @@
     <meta name="twitter:description" content="Personal portfolio website of Abdullah Dajani. I build pixel-perfect, engaging, and accessible digital experiences.">
     <meta name="twitter:image" content="/public/images/twitter-card.jpg"> -->
 </head>
-<body class="bg-gray-50 flex flex-col items-center justify-center h-screen overflow-hidden font-sans antialiased text-gray-900 px-40">
-  
-  <div class="bg-gray-900 text-gray-50 flex flex-col items-center justify-center mb-40 rounded-lg p-5 pb-10">
-    <h2 class="font-bold text-2xl text-center">Enter Credit Card Number</h2>
-    <form id="creditForm" method="POST" class="flex flex-row justify-center items-center px-4">
-      <input type="text" id="credit_card" name="credit_card" placeholder="Credit Card Number" class="my-8 py-2 px-7 mx-2 text-base bg-blue text-gray-900 rounded-2xl">
-      <i id="validityIcon"></i> 
-    </form>
-    <div id="error_message" class="text-red-500 font-bold text-sm pl-7 w-full"></div>
+<body class="bg-gray-50 flex flex-col items-center justify-center overflow-hidden font-sans antialiased text-gray-900 mx-10">
+  <div class="h-screen w-full max-w-md justify-center items-center">
+
+    <div class="my-20 space-y-2 px-5">
+      <form>
+        <a href="/" action="get"><h3 class="fcursor-pointer hover:underline"><i class="fa-solid text-sm fa-arrow-left mr-1"></i>Abdullah Dajani</h3></a>
+      </form>
+      <h1 class="text-4xl font-bold">API</h1>
+    </div>
+
+    <div class="bg-gray-900 text-gray-50 flex flex-col  mb-40 rounded-lg p-5 ">
+      <h2 class="font-bold text-xl text-left pb-6">Enter Credit Card Number</h2>
+      <form id="creditForm" method="post" class="flex flex-row justify-center items-center w-full">
+        <input type="text" id="credit_card" name="credit_card" placeholder="Credit Card Number" class="my-2 py-2 mr-2 px-2 w-full text-base text-gray-900 rounded-2xl">
+        <i id="validityIcon" class="px-2"></i> 
+      </form>
+      <div class="flex flex-row items-center">
+        <div id="error_message" class="text-red-500 font-bold text-sm pr-2"></div>
+        <i id="creditCardType" class="text-xl"></i>
+      </div>
+      
+      
+    </div>
+
   </div>
 
   <!-- footer & rigts-->
-    <footer class="w-full fixed bottom-0 px-20">    
+    <footer class="w-full fixed bottom-0 px-5">    
       <div class="flex items-center justify-center mt-10 mb-5 text-sm font-light text-gray-500 w-full">
         <p class="text-center">Coded from scratch in <a href="https://code.visualstudio.com/" target="_blank" class="font-bold hover:text-black cursor-pointer">Visual Studio Code</a> by Abdullah Dajani. Built with <a href="https://www.javascript.com/" target="_blank" class="font-bold hover:text-black cursor-pointer">Javascript</a>, <a href="https://flask.palletsprojects.com/en/3.0.x/" target="_blank" class="font-bold hover:text-black cursor-pointer">Flask</a>, and <a href="https://tailwindcss.com/" target="_blank" class="cursor-pointer hover:text-black font-bold">Tailwind CSS</a>.</p>
       </div>
     </footer>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-  const creditCardInput = document.getElementById('credit_card');
+    document.addEventListener('DOMContentLoaded', function() {
+      const creditCardInput = document.getElementById('credit_card');
 
-  creditCardInput.addEventListener('input', function() {
+      creditForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+      })
+
+    creditCardInput.addEventListener('input', function() {
     const creditCardNumber = creditCardInput.value;
 
     fetch('/credit', {
@@ -69,17 +88,29 @@
     .then(data => {
       const errorMessageElement = document.getElementById('error_message');
       const validityIcon = document.getElementById('validityIcon');
+      const creditCardType = document.getElementById('creditCardType');
+
       if (data.status === 'error') {
         errorMessageElement.textContent = data.message;
         errorMessageElement.classList.remove('text-green-500');
         errorMessageElement.classList.add('text-red-500');
         validityIcon.className = 'fa-solid fa-circle-xmark text-red-500';
+        creditCardType.className = '';
       } else {
         errorMessageElement.textContent = 'Credit card is valid';
         errorMessageElement.classList.remove('text-red-500');
         errorMessageElement.classList.add('text-green-500');
         validityIcon.className = 'fa-solid fa-circle-check text-green-500';
         
+        if (data.type === 'VISA') {
+          creditCardType.className = 'fa-brands fa-cc-visa';
+        }
+        else if (data.type === 'MASTERCARD') {
+          creditCardType.className = 'fa-brands fa-cc-mastercard';  
+        }
+        else if (data.type === 'VISA') {
+          creditCardType.className = 'fa-brands fa-cc-amex';
+        }
       }
     })
     .catch(error => {
@@ -92,3 +123,4 @@
     
 </body>
 </html>
+

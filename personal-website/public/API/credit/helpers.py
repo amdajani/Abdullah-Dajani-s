@@ -1,11 +1,7 @@
-# initlizae the dataset to include user_id from 
-# the session, credit_card_hashed, card_type
-
+import sqlite3
 
 
 # Luhn's Algorithm checksum function
-
-#make sure to check if it's greater than a certain threshold
 def checksum(credit_card):
     #credit card number sent as a string
     credit_card = str(credit_card)[::-1]
@@ -24,14 +20,23 @@ def checksum(credit_card):
 
 # card_type function
 def card_type(credit_card):
-    return 1
+    
+    if len(credit_card) == 13:
+        if credit_card[0] == '4':
+            return 'VISA'
+        return 0
+    
+    if len(credit_card) == 16:
+        if credit_card[0] == '4':
+            return ('VISA')
+        if 51 <= int(credit_card[0:2]) <= 55:
+            return ('MASTERCARD')
+        if 2221 <= int(credit_card[0:4]) <= 2720:
+            return 'MASTERCARD'
+        return 0
 
-'''card_type = card_type(credit_card)
-
-    user_id = session["user_id"]
-    if user_id:
-        db = sqlite3.connect
-        cursor = db.cursor()
-        db.execute("INSERT INTO credit_log (user_id, credit_card, card_type) VALUES (?, ?, ?)", user_id, int(credit_card), card_type)
-        db.commit()
-        db.close'''
+    if len(credit_card) == 15:
+        if credit_card[0:2] in ('34', '37'):
+            return 'AMEX'
+        return 0
+    return 0
