@@ -47,7 +47,7 @@ def db_init():
     cursor = connection.cursor()
 
     cursor.execute('''
-    CREATE TABLE IF NOT EXISTS credit_cards (
+    CREATE TABLE IF NOT EXISTS credit_card (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     user_id TEXT NOT NULL,
     credit_card_hashed TEXT NOT NULL,
@@ -58,16 +58,15 @@ def db_init():
     connection.commit()
     connection.close()
 
+# made it easier syntax to register new card info in the app.py
 def insert_recorder(user_id, credit_card_hashed, credit_card_type):
     connection = sqlite3.connect('credit_card.db')
     cursor = connection.cursor()
 
-    cursor.execute("INSERT INTO credit_cards (user_id, credit_card_hashed, credit_card_type) VALUES (?, ?, ?)", (user_id, credit_card_hashed, credit_card_type))
+    cursor.execute("INSERT INTO credit_card (user_id, credit_card_hashed, credit_card_type) VALUES (?, ?, ?)", (user_id, credit_card_hashed, credit_card_type))
 
     connection.commit()
     connection.close()
 
 def generate_user_id():
     return str(uuid4())
-
-
