@@ -6,11 +6,11 @@ from werkzeug.security import generate_password_hash
 from waitress import serve
 import os
 
-app = Flask(__name__, template_folder='../../templates', static_folder='../../static')
+app = Flask(__name__, template_folder='../../public_html', static_folder='../../static')
 app.secret_key = os.urandom(24)
 
 # Configure Jinja2 to load templates from both 'templates' and 'public' directories
-template_loader = FileSystemLoader(['../../templates'])
+template_loader = FileSystemLoader(['../../public_html'])
 app.jinja_loader = template_loader
 
 # Initialize the database
