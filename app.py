@@ -22,9 +22,6 @@ def home():
     return render_template('index.html')
 
 # (WORK LATER): include a LinkedIn API
-@app.route("/hackathon")
-def hackathon():
-    return redirect("https://www.linkedin.com/feed/update/urn:li:activity:6947073917517733888/")
 
 
 @app.route("/credit-card", methods=["GET", "POST"])
@@ -75,4 +72,4 @@ def not_found(error):
     return jsonify({'status': 'error', 'message': 'So, you entered the backrooms in the hope of finding a story to tell? Not today, the page is not found'}), 404
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8000)
+    app.run()
