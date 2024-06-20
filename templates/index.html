@@ -76,7 +76,7 @@
             </div>
 
             <!-- Experience Cards -->
-            <div id="right-page-mid" class="lg:pt-2 lg:mt-32"></div>
+            <div id="right-page-mid" class="lg:pt-36"></div>
             <div class="lg:hidden"><h2 class=" lg:hidden mt-20 mb-6 text-gray-900 font-bold text-lg">EXPERIENCE</h2></div>
             <div class="lg:max-w-xl space-y-8">
                     
@@ -108,7 +108,7 @@
             </div>
 
             <!-- Projects -->
-            <div id="right-page-projects" class="lg:pt-2 lg:mt-32"></div>
+            <div id="right-page-projects" class="lg:pt-36"></div>
             <div class="lg:hidden"><h2 class=" lg:hidden mt-20 mb-6 text-gray-900 font-bold text-lg">PROJECTS</h2></div>
             <div class="lg:max-w-xl">
                 
@@ -178,41 +178,41 @@
 
     <!-- Jacascript code-->
     <script>
-        document.addEventListener('DOMContentLoaded', function()
-        {
-            const links = document.querySelectorAll('#navbar a');
-            const aboutSection = document.querySelector('#right-page-beginning');
-            const experienceSection = document.querySelector('#right-page-mid');
-            const projectSection = document.querySelector('#right-page-projects');
-            
-        
-            links.forEach(link => {
-                link.addEventListener('click', function(event) {
-                    links.forEach(l => l.classList.remove('text-gray-900', 'translate-x-8'));
-                    event.currentTarget.classList.add('text-gray-900', 'translate-x-8');
-                });
-            });
-        
-            links[0].classList.add('text-gray-900', 'translate-x-8');
-            
-            document.addEventListener('scroll', function () {
-                const scrollPosition = window.scrollY;
-                const aboutSectionTop = aboutSection.getBoundingClientRect().top;
-                const experienceSectionTop = experienceSection.getBoundingClientRect().top;
-                const projectSectionTop = projectSection.getBoundingClientRect().top;
+        document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('#navbar a');
+    const aboutSection = document.querySelector('#right-page-beginning');
+    const experienceSection = document.querySelector('#right-page-mid');
+    const projectSection = document.querySelector('#right-page-projects');
+    const rightPageContainer = document.querySelector('#right-page-container');
 
-                if (scrollPosition >= projectSectionTop) {
-                    links.forEach(l => l.classList.remove('text-gray-900', 'translate-x-8'));
-                    links[2].classList.add('text-gray-900', 'translate-x-8');
-                } else if (scrollPosition >= experienceSectionTop) {
-                    links.forEach(l => l.classList.remove('text-gray-900', 'translate-x-8'));
-                    links[1].classList.add('text-gray-900', 'translate-x-8');
-                } else if (scrollPosition >= aboutSectionTop) {
-                    links.forEach(l => l.classList.remove('text-gray-900', 'translate-x-8'));
-                    links[0].classList.add('text-gray-900', 'translate-x-8');
-                }
-            });
+    links.forEach(link => {
+        link.addEventListener('click', function(event) {
+            links.forEach(l => l.classList.remove('text-gray-900', 'translate-x-8'));
+            event.currentTarget.classList.add('text-gray-900', 'translate-x-8');
         });
+    });
+
+    links[0].classList.add('text-gray-900', 'translate-x-8');
+    
+    rightPageContainer.addEventListener('scroll', function () {
+        const scrollPosition = rightPageContainer.scrollTop;
+        const aboutSectionTop = aboutSection.offsetTop;
+        const experienceSectionTop = experienceSection.offsetTop;
+        const projectSectionTop = projectSection.offsetTop;
+
+        if (scrollPosition >= projectSectionTop - rightPageContainer.offsetTop) {
+            links.forEach(l => l.classList.remove('text-gray-900', 'translate-x-8'));
+            links[2].classList.add('text-gray-900', 'translate-x-8');
+        } else if (scrollPosition >= experienceSectionTop - rightPageContainer.offsetTop) {
+            links.forEach(l => l.classList.remove('text-gray-900', 'translate-x-8'));
+            links[1].classList.add('text-gray-900', 'translate-x-8');
+        } else if (scrollPosition >= aboutSectionTop - rightPageContainer.offsetTop) {
+            links.forEach(l => l.classList.remove('text-gray-900', 'translate-x-8'));
+            links[0].classList.add('text-gray-900', 'translate-x-8');
+        }
+    });
+});
+
     </script>
 </body>
 </html>
